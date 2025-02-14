@@ -13,30 +13,35 @@
         android:id="@+id/Przycisk1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" "/>
+        android:text="1"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/Przycisk2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" "/>
+        android:text="2"
+        tools:ignore="HardcodedText"/>
 
     <Button
         android:id="@+id/Przycisk3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" "/>
+        android:text="3"
+        tools:ignore="HardcodedText"/>
 
     <Button
         android:id="@+id/Przycisk4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" "/>
+        android:text="4"
+        tools:ignore="HardcodedText"/>
 
     <Button
         android:id="@+id/Przycisk5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" "/>
+        android:text="5"
+        tools:ignore="HardcodedText"/>
 
 </LinearLayout>

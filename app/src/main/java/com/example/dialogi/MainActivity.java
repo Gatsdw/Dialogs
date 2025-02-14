@@ -2,6 +2,7 @@ package com.example.dialogi;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -24,10 +25,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        findViewById(R.id.Przycisk1).setOnClickListener(shortAlertDialog());
+        findViewById(R.id.Przycisk1).setOnClickListener(showListDialog());
 
     }
-    private void shortAlertDialog(){
+    private View.OnClickListener shortAlertDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Prosty AlertBox");
         builder.setMessage("Przykładowa wiadomość");
@@ -44,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         builder.create().show();
+        return null;
     }
 
-    private void showListDialog(){
-        final String[] items = ("Opcja 1", "Opcja 2", "Opcja 3", "Opcja 4");
+    private View.OnClickListener showListDialog(){
+        final String[] items = {"Opcja 1", "Opcja 2", "Opcja 3", "Opcja 4"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Wybierz Opcje");
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Wybrano: " + items[which], Toast.LENGTH_SHORT).show();
             }
 
-        }
+        });
+        return null;
     }
 }
